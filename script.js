@@ -97,7 +97,7 @@ $(document).ready(function() {
       url:
         "https://api.openweathermap.org/data/2.5/forecast?q=" +
         grad2 +
-        "&appid=9dcd8991f9f548f9d28bc5cf37a80c4e&units=metric",
+        "&appid=6440188aff2876c70eb66a0dd2f8ff08&units=metric",
       dataType: "jsonp",
       success: function(podaci) {
         $("#forecastWeather").empty();
