@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Welcome</title>
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	<script src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<section class="intro">
+		<div class="inner"></div>
+		<div class="content">
+			<div class=div class="content">
+				<h1>Enter a city or country </h1>
+			</div>
+			<form>
+				<input type='text' id='grad_value'>
+			</form>
+			<div class="space"></div>
+			<form>
+				<input type='submit' id='send' value="Go">
+			</form>
+		</div>
+	</section>
+
+	<section class="main">
+		<div id="currentWeather">
+			<div id="plusInfo">
+				<p id="pressure" class="data1">Pressure: </p>
+				<p id="humidity" class="data1">Humidity: </p>
+				<p id="minTemp" class="data1">Min temperature: </p>
+				<p id="maxTemp" class="data1">Max temperature: </p>
+				<p id="windSpeed" class="data1">Wind Speed: </p>
+				<p id="windDirection" class="data1">Wind Direction: </p>
+				<input type="submit" id="gumb" value="See next 5 days">
+			</div>
+			<div id="mainInfo">
+				<span id="currentDate"></span>
+				<h3 id='temperatura'></h3>
+				<h3 id='weather'></h3>
+				<img src="" id="ikon">
+			</div>
+		</div>
+	</section>
+
+	<section class="forecast">
+		<div id="nextFiveDays"></div>
+		<div id="forecastWeather">
+		</div>
+	</section>
+	<section class="footer">
+		<h2>If you hate rainy or sunny day play our <a href="game.html" target="_blank"> GAME </a> !!!!!</h2>
+		<section id="partners" class="partners">
+			<div class="content-wrap">
+				<h2> You can download our app for free on: </h2>
+				<div class="space"></div>
+				<ul>
+					<a href="https://www.microsoft.com/en-us/store/b/home">
+						<h2> <img class="profile-img col-narrow" src="Materials/1.1.png" alt="Logo1"> </h2>
+					</a>
+					<a href="https://play.google.com/store">
+						<h2> <img class="profile-img col-narrow" src="Materials/2.2.png" alt="Logo2"> </h2>
+					</a>
+					<a href="https://www.apple.com/ios/app-store/">
+						<h2> <img class="profile-img col-narrow" src="Materials/3.3.png" alt="Logo3"> </h2>
+					</a>
+				</ul>
+			</div>
+		</section>
+		<h2> Let's Keep in Touch! </h2>
+		<h2>Contact Us:</h2>
+		<div id="contact">
+			<div><input type="text" placeholder="Name"></div>
+			<div><input type="text" placeholder="Surname"></div>
+			<div><input type="email" placeholder="example@mail.com"></div>
+		</div>
+		<h2>Where can you find us:</h2>
+		<div id="map"></div>
+		<script>
+			var map;
+			function initMap() {
+				map = new google.maps.Map(document.getElementById('map'), {
+					center: { lat: 44.198681, lng: 17.912500 },
+					zoom: 15
+				});
+				var marker = new google.maps.Marker({
+					position: { lat: 44.198681, lng: 17.912500 },
+					map: map
+				});
+			}
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?
+								key=AIzaSyCEG3Q8quM6CFNtun5oetNhKn6sFf94Pkk&callback=initMap" async defer></script>
+		<a href="#" id="scroll" style="display: none;"><span></span></a>
+</body>
+
+</html>
